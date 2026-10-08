@@ -1,0 +1,23 @@
+{
+  "block.createodometer.odometer": "Odometer Gauge",
+  "itemGroup.createodometer": "Create: Odometer",
+  "createodometer.configuration.title": "Create: Odometer Configuration",
+  "createodometer.configuration.minimumSpeed": "Minimum speed (m/s)",
+  "createodometer.configuration.minimumSpeed.tooltip": "Ignore movement below this speed to suppress parked jitter. Very slow travel is also excluded.",
+  "createodometer.configuration.maximumPlausibleSpeed": "Maximum plausible speed (m/s)",
+  "createodometer.configuration.maximumPlausibleSpeed.tooltip": "Reject physics-step jumps above this speed. This does not limit vehicle speed.",
+  "createodometer.configuration.allowTripReset": "Allow player trip resets",
+  "createodometer.configuration.allowTripReset.tooltip": "Allow nearby players to reset trips. Operators can always reset them.",
+  "createodometer.configuration.displaySyncTicks": "Display refresh interval (ticks)",
+  "createodometer.configuration.displaySyncTicks.tooltip": "Refresh gauge readings every this many game ticks. Mileage tracking still runs every physics step.",
+  "createodometer.configuration.units": "Display units",
+  "createodometer.configuration.units.tooltip": "Your local display units for all gauges and menus. One block is treated as one meter.",
+  "createodometer.configuration.decimalPlaces": "Decimal places",
+  "createodometer.configuration.decimalPlaces.tooltip": "Number of decimal places shown in gauge readings (0\u20133).",
+  "createodometer.display_source.mileage": "Ship Mileage",
+  "createodometer.display_link.counter": "Counter",
+  "createodometer.display_link.mode": "Distance Mode",
+  "createodometer.display_link.units": "Units",
+  "createodometer.display_link.decimals": "Decimal Places",
+  "createodometer.display_link.follow": "Follow Gauge"
+}

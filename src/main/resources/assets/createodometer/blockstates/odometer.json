@@ -1,0 +1,130 @@
+{
+  "variants": {
+    "ceiling=false,facing=north,panel=single": {
+      "model": "createodometer:block/odometer",
+      "y": 0
+    },
+    "ceiling=false,facing=east,panel=single": {
+      "model": "createodometer:block/odometer",
+      "y": 90
+    },
+    "ceiling=false,facing=south,panel=single": {
+      "model": "createodometer:block/odometer",
+      "y": 180
+    },
+    "ceiling=false,facing=west,panel=single": {
+      "model": "createodometer:block/odometer",
+      "y": 270
+    },
+    "ceiling=false,facing=north,panel=start": {
+      "model": "createodometer:block/odometer_start",
+      "y": 0
+    },
+    "ceiling=false,facing=east,panel=start": {
+      "model": "createodometer:block/odometer_start",
+      "y": 90
+    },
+    "ceiling=false,facing=south,panel=start": {
+      "model": "createodometer:block/odometer_start",
+      "y": 180
+    },
+    "ceiling=false,facing=west,panel=start": {
+      "model": "createodometer:block/odometer_start",
+      "y": 270
+    },
+    "ceiling=false,facing=north,panel=end": {
+      "model": "createodometer:block/odometer_end",
+      "y": 0
+    },
+    "ceiling=false,facing=east,panel=end": {
+      "model": "createodometer:block/odometer_end",
+      "y": 90
+    },
+    "ceiling=false,facing=south,panel=end": {
+      "model": "createodometer:block/odometer_end",
+      "y": 180
+    },
+    "ceiling=false,facing=west,panel=end": {
+      "model": "createodometer:block/odometer_end",
+      "y": 270
+    },
+    "ceiling=true,facing=north,panel=single": {
+      "model": "createodometer:block/odometer_ceiling",
+      "y": 0
+    },
+    "ceiling=true,facing=east,panel=single": {
+      "model": "createodometer:block/odometer_ceiling",
+      "y": 90
+    },
+    "ceiling=true,facing=south,panel=single": {
+      "model": "createodometer:block/odometer_ceiling",
+      "y": 180
+    },
+    "ceiling=true,facing=west,panel=single": {
+      "model": "createodometer:block/odometer_ceiling",
+      "y": 270
+    },
+    "ceiling=true,facing=north,panel=start": {
+      "model": "createodometer:block/odometer_ceiling_start",
+      "y": 0
+    },
+    "ceiling=true,facing=east,panel=start": {
+      "model": "createodometer:block/odometer_ceiling_start",
+      "y": 90
+    },
+    "ceiling=true,facing=south,panel=start": {
+      "model": "createodometer:block/odometer_ceiling_start",
+      "y": 180
+    },
+    "ceiling=true,facing=west,panel=start": {
+      "model": "createodometer:block/odometer_ceiling_start",
+      "y": 270
+    },
+    "ceiling=true,facing=north,panel=end": {
+      "model": "createodometer:block/odometer_ceiling_end",
+      "y": 0
+    },
+    "ceiling=true,facing=east,panel=end": {
+      "model": "createodometer:block/odometer_ceiling_end",
+      "y": 90
+    },
+    "ceiling=true,facing=south,panel=end": {
+      "model": "createodometer:block/odometer_ceiling_end",
+      "y": 180
+    },
+    "ceiling=true,facing=west,panel=end": {
+      "model": "createodometer:block/odometer_ceiling_end",
+      "y": 270
+    },
+    "ceiling=false,facing=north,panel=middle": {
+      "model": "createodometer:block/odometer_middle"
+    },
+    "ceiling=false,facing=east,panel=middle": {
+      "model": "createodometer:block/odometer_middle",
+      "y": 90
+    },
+    "ceiling=false,facing=south,panel=middle": {
+      "model": "createodometer:block/odometer_middle",
+      "y": 180
+    },
+    "ceiling=false,facing=west,panel=middle": {
+      "model": "createodometer:block/odometer_middle",
+      "y": 270
+    },
+    "ceiling=true,facing=north,panel=middle": {
+      "model": "createodometer:block/odometer_ceiling_middle"
+    },
+    "ceiling=true,facing=east,panel=middle": {
+      "model": "createodometer:block/odometer_ceiling_middle",
+      "y": 90
+    },
+    "ceiling=true,facing=south,panel=middle": {
+      "model": "createodometer:block/odometer_ceiling_middle",
+      "y": 180
+    },
+    "ceiling=true,facing=west,panel=middle": {
+      "model": "createodometer:block/odometer_ceiling_middle",
+      "y": 270
+    }
+  }
+}

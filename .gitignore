@@ -1,0 +1,43 @@
+.gradle/
+build/
+runs/
+libs/
+.idea/
+*.iml
+# Gradle
+.gradle/
+build/
+out/
+
+# Minecraft / Forge dev runtime
+run/
+runs/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# Logs / crashes
+*.log
+logs/
+crash-reports/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp

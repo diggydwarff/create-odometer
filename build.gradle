@@ -1,0 +1,42 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+version = '1.1.1'
+group = 'dev.diggydwarff.createodometer'
+base { archivesName = 'create-odometer-neoforge-1.21.1' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.createmod.net'; content { includeGroup 'com.simibubi.create'; includeGroup 'net.createmod.ponder'; includeGroup 'dev.engine-room.flywheel' } }
+    maven { url = 'https://maven.ithundxr.dev/snapshots'; content { includeGroup 'com.tterrag.registrate' } }
+    maven { url = 'https://maven.ithundxr.dev/hidden'; content { includeGroup 'com.tterrag.registrate' } }
+    maven { url = 'https://maven.ryanhcode.dev/releases'; content { includeGroup 'dev.ryanhcode.sable-companion' } }
+    maven { url = 'https://api.modrinth.com/maven'; content { includeGroup 'maven.modrinth' } }
+}
+neoForge {
+    version = '21.1.228'
+    runs { client { client(); gameDirectory = file('runs/client') }; server { server(); gameDirectory = file('runs/server'); programArgument '--nogui' } }
+    mods { createodometer { sourceSet(sourceSets.main) } }
+}
+dependencies {
+    implementation('com.simibubi.create:create-1.21.1:6.0.10-280') { transitive = false }
+    implementation('net.createmod.ponder:ponder-neoforge:1.0.82+mc1.21.1')
+    implementation('com.tterrag.registrate:Registrate:MC1.21-1.3.0+67')
+    compileOnly('dev.engine-room.flywheel:flywheel-neoforge-api-1.21.1:1.0.6')
+    runtimeOnly('dev.engine-room.flywheel:flywheel-neoforge-1.21.1:1.0.6')
+    runtimeOnly('maven.modrinth:create-aeronautics:w7zlLnea') { transitive = false }
+    compileOnly('maven.modrinth:sable:U678xqle') { transitive = false }
+    compileOnly('dev.ryanhcode.sable-companion:sable-companion-common-1.21.1:1.6.0') { transitive = false }
+    runtimeOnly('maven.modrinth:sable:U678xqle') { transitive = false }
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+sourceSets.test.compileClasspath += sourceSets.main.compileClasspath
+sourceSets.test.runtimeClasspath += sourceSets.main.runtimeClasspath + sourceSets.main.compileClasspath
+tasks.register('verifyMileage', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.diggydwarff.createodometer.MileageTest'
+}
+tasks.named('check') { dependsOn 'verifyMileage' }
+tasks.named('test') { enabled = false }

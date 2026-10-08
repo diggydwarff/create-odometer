@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " N ",
+    " B ",
+    " R "
+  ],
+  "key": {
+    "N": {
+      "item": "create:nixie_tube"
+    },
+    "B": {
+      "item": "create:brass_casing"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "id": "createodometer:odometer",
+    "count": 1
+  }
+}
