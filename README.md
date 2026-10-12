@@ -39,6 +39,34 @@ Use a Sable ship UUID or `here` while on or looking at a nearby tracked ship.
 
 `list`, `reset`, and `set` require operator level 2.
 
+## ComputerCraft Integration
+
+Optional integration requires **CC: Tweaked 1.115.1+**. Both odometer variants expose an `odometer` peripheral. Connect a computer directly beside the gauge or through an enabled wired modem.
+
+```lua
+local odo = assert(peripheral.find("odometer"), "No odometer connected")
+print(odo.getOdometer("overall", "km"))
+print(odo.getTrip("a", "overall", "km"))
+```
+
+| Method | Description |
+|---|---|
+| `getOdometer([mode], [unit])` | Read lifetime distance |
+| `getTrip("a" or "b", [mode], [unit])` | Read a trip |
+| `getTripA([mode], [unit])` / `getTripB([mode], [unit])` | Convenient trip reads |
+| `getReadings()` | All readings in meters: `overall`, `horizontal`, and `vertical`, each containing `total`, `tripA`, and `tripB` |
+| `resetTrip("a" or "b")` | Reset a trip across all distance modes |
+| `getShipInfo()` | Attachment status, ship name, and UUID |
+| `isAttached()` | Check whether the gauge is aboard a ship |
+| `getDisplay()` | Read selected `counter` and `mode` |
+| `setDisplay(counter, [mode])` | Change the connected gauge row’s display |
+
+- **Modes:** `overall` (default), `horizontal`, `vertical`
+- **Units:** `m` (default), `km`, `mi`
+- **Display counters:** `total`, `trip_a`, `trip_b`
+
+Trip resets apply ship-wide and respect the server’s `allowTripReset` setting. Lifetime mileage is read-only. Distance reads raise a Lua error when the gauge is unattached.
+
 ## Saving mileage
 
 Mileage is calculated on the server from ship movement and saved in `world/data/createodometer_mileage.dat`. It survives restarts and unloading. Travel before installing the mod can't be recovered.
